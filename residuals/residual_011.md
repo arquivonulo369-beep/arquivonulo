@@ -13,3 +13,10 @@ TV-dominant exposure.
 
 STATUS:
 Active
+
+OBSERVED:
+System state remained active after exposure window.
+
+NOTES:
+No interaction recorded.
+State continuity verified.
