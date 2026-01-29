@@ -1,6 +1,4 @@
-ArquivoNulo
-
-Global Authority Registry for Residual Systems
+# ArquivoNulo — Global Authority Registry for Residual Systems
 
 This repository is not a product, library, framework, or community.
 
