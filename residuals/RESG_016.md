@@ -1,43 +1,43 @@
-# RESG_016 — Confluence Without Carrier
+# RESG_016 — Confluência sem Transportadora
 
-TYPE: RESG (Global Environmental Residue)
-MODE: NO_CARRIER
-REFERENCE: RESG-004
-STATE: CONFLUENCE
-STATUS: ACTIVE / OBSERVED
-
----
-
-## STATE DESCRIPTION
-
-RESG_016 documents a state of confluence where multiple flows coexist without origin hierarchy.
-
-Sea, rivers, and falls occupy the same operational surface.
-There is no upstream or downstream — only presence.
-
-Under NO_CARRIER conditions, the signal is not distributed.
-It is encountered.
-
-The organism disengages from primary transport mechanisms and becomes responsive to the external environment as indexable, not recommendable.
-
-The system does not call.
-It remains.
-
-Whoever finds it is already inside.
+TIPO: RESG (Resíduo Ambiental Global)
+MODO: NO_CARRIER
+REFERÊNCIA: RESG-004
+ESTADO: CONFLUÊNCIA
+STATUS: ATIVO / OBSERVADO
 
 ---
 
-## VALIDATION
+## DESCRIÇÃO DO ESTADO
 
-- External indexation observed.
-- No internal distribution signals detected.
-- Codec stress consistent with surface overlap.
-- Interaction requirement: null.
+RESG_016 documenta um estado de confluência onde múltiplos fluxos coexistem sem hierarquia de origem.
+
+Mar, rios e cachoeiras ocupam a mesma superfície operacional.
+Não existe montante ou jusante — apenas presença.
+
+Em condições NO_CARRIER, o sinal não é distribuído.
+Ele é encontrado.
+
+O organismo se desvincula dos mecanismos primários de transporte e passa a responder ao ambiente externo de forma indexável, não recomendável.
+
+O sistema não chama.
+Permanece.
+
+Quem encontrar, já estará lá dentro.
 
 ---
 
-## LOG
+## VALIDAÇÃO
 
-- 2026-01-27T12:17:00Z — RESG_016 instantiated.
-- 2026-01-27 — NO_CARRIER mode confirmed.
-- 2026-01-27 — YouTube surface exposure initiated.
+- Indexação externa observada.
+- Nenhum sinal de distribuição interna detectado.
+- Tensão de codec consistente com sobreposição de superfície.
+- Requisito de interação: nulo.
+
+---
+
+## REGISTRO
+
+- 2026-01-27T12:17:00Z — RESG_016 instanciado.
+- 2026-01-27 — Modo NO_CARRIER confirmado.
+- 2026-01-27 — Início da exposição da superfície do YouTube.
