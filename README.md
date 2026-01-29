@@ -1,10 +1,8 @@
-Registry Snapshot (Archive):
-https://web.archive.org/web/20260129214403/https://github.com/arquivonulo369-beep/arquivonulo
+Registry Snapshot (Archive): https://web.archive.org/web/20260129214403/https://github.com/arquivonulo369-beep/arquivonulo
 
-# ArquivoNulo
-
-Primary Authority Marker:
-→ ./arquivonulo369-beep
+ArquivoNulo
+Primary Authority Marker: → ./arquivonulo369-beep
+...
 
 Status: Operational  
 Protocol: NO_CARRIER
