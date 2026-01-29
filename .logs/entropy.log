@@ -1,3 +1,8 @@
+[ENTROPY_LOG]
+Type: Operational system log
+Scope: ArquivoNulo Global
+Persistence Layer: GitHub Authority
+
 [RESIDUAL_011] SYSTEM STATE LOG
 
 [2026-01-26 23:22:22] SYSTEM_CHECK: START
