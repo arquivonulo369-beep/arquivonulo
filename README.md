@@ -119,3 +119,5 @@ This repository exists so that
 time — not interpretation — decides relevance.
 
 manifesto.md — system declaration
+
+RAW DATA ACCESS — https://nuloarchive.gumroad.com/l/ukdss
