@@ -120,4 +120,8 @@ time — not interpretation — decides relevance.
 
 manifesto.md — system declaration
 
+## Validated External Residues
+
+- RESIDUAL IA 001  
+  https://archive.org/details/residual-ia-001
 RAW DATA ACCESS — https://nuloarchive.gumroad.com/l/ukdss
