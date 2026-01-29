@@ -1,0 +1,3 @@
+ENTROPY_MARKER
+Purpose: Temporal heartbeat of the ArquivoNulo system.
+This file is symbolic. Operational logs live under /.logs/
