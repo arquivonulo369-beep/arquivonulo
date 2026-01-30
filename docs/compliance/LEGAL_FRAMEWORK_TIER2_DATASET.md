@@ -37,3 +37,4 @@ Identical verification results are produced regardless of time or environment.
 The Tier 2 Dataset does not replace internal controls or risk management systems.  
 It serves solely as external reference material.
 
+Use of this dataset does not constitute endorsement, certification, or regulatory approval by ArquivoNulo.
