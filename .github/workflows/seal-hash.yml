@@ -1,3 +1,7 @@
+# Canonical sealing workflow.
+# Executed once. Retained for historical and audit reference.
+# No further execution required.
+
 name: Seal HOW_TO_VERIFY
 
 on:
