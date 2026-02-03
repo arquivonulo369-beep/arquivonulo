@@ -1,0 +1,26 @@
+name: Seal HOW_TO_VERIFY
+
+on:
+  workflow_dispatch:
+
+jobs:
+  seal:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Generate canonical SHA-256
+        run: |
+          sha256sum HOW_TO_VERIFY.md > HOW_TO_VERIFY.sha256
+          echo "Generated hash:"
+          cat HOW_TO_VERIFY.sha256
+
+      - name: Commit sealed hash
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add HOW_TO_VERIFY.sha256
+          git commit -m "Seal HOW_TO_VERIFY canonical SHA-256" || echo "No changes"
+          git push
