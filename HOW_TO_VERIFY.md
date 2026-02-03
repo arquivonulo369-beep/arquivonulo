@@ -30,3 +30,4 @@ must be considered non-canonical.
 
 This verification does not depend on Git, commit history,  
 or platform availability.
+
