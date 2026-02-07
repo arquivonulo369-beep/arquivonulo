@@ -1,1 +1,1 @@
-SIA_TEMPLATE_NON_AI.md — canonical template for data provenance anchoring in corporate transactions (M&A, Due Diligence, Regulatory)
+Status: NON_CANONICAL — External reference. Not part of the ArquivoNulo canonical core.
