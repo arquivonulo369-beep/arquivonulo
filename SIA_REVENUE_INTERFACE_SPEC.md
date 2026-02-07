@@ -1,5 +1,6 @@
+<!-- NON_CANONICAL -->
+
 # SIA — Revenue Interface Specification
-## NON_CANONICAL
 ## Boundary Description Only
 
 STATE: NO_CARRIER  
