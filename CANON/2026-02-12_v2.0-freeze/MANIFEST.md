@@ -1,0 +1,18 @@
+# MANIFEST — 2026-02-12_v2.0-freeze
+
+Date (UTC reference): 2026-02-12
+
+Algorithm:
+SHA3-384
+
+Document:
+Path: CANON/2026-02-12_v2.0-freeze/SIA-DOC-2.0.md
+Commit: 8be0254
+SHA3-384:
+04d3476cf6da065c36615540dc2038460f35f5b7075af8791063c214f6f7538350130bb08d98fe21e002c2a8fd1811ce
+
+Directory:
+Path: CANON/2026-02-12_v2.0-freeze/
+Commit: d1c584d
+SHA3-384:
+cf503b7f6985dd3d1f2935ee1996561f53b811fb6698d354444c400ff3f27ca6efeb5a326cd99694c7cf4d2c39cc8246
