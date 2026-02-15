@@ -3,24 +3,60 @@
 ## Purpose
 This document defines the deterministic, offline procedure used to verify the integrity and authenticity of ArquivoNulo artifacts.
 
-## Inputs
-- Encrypted artifact file (`.enc`)
-- Corresponding SHA-256 hash file
+---
 
-## Procedure
-1. Ensure the verification environment is offline.
-2. Compute the SHA-256 hash of the encrypted artifact file.
-3. Compare the computed hash with the provided reference hash.
-4. If hashes match, integrity is confirmed.
+## Hash Standard
 
-## Output
-- **Match**: artifact is valid and unaltered.
+Artifacts created before 2026-02-12  
+Algorithm: SHA-256  
+Digest length: 64 hexadecimal characters (lowercase)
+
+Artifacts created on or after 2026-02-12  
+Algorithm: SHA3-384  
+Digest length: 96 hexadecimal characters (lowercase)
+
+The transition is forward-only.  
+Legacy artifacts remain sealed under their original hash.
 
 ---
 
-## Canonical Reference
+## Inputs
+- Artifact file
+- Corresponding hash sidecar file (`.sha256` or `.sha3-384`)
 
-The following canonical artifact is sealed and immutable.
+---
+
+## Procedure
+1. Ensure the verification environment is offline.
+2. Identify the artifact creation date.
+3. Determine the required hash algorithm.
+4. Compute the hash of the artifact.
+5. Compare the computed digest with the provided reference hash.
+6. If hashes match, integrity is confirmed.
+
+---
+
+## Example (OpenSSL)
+
+SHA-256:
+
+openssl dgst -sha256 file.ext
+
+SHA3-384:
+
+openssl dgst -sha3-384 file.ext
+
+---
+
+## Output
+- **Match**: artifact is valid and unaltered.
+- **Mismatch**: artifact integrity cannot be confirmed.
+
+---
+
+## Canonical Reference (Pre-Transition Example)
+
+The following canonical artifact is sealed and immutable under SHA-256.
 
 | Field    | Value |
 |--------- |-------|
