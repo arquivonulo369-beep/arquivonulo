@@ -1,0 +1,27 @@
+name: Structural Freeze Snapshot
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate structural index
+        run: |
+          TAG_NAME=${GITHUB_REF#refs/tags/}
+          git ls-tree -r --name-only $TAG_NAME | sort > $TAG_NAME.index
+          sha256sum $TAG_NAME.index > $TAG_NAME.index.sha256
+
+      - name: Commit snapshot
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add *.index*
+          git commit -m "Auto structural snapshot for $TAG_NAME" || echo "Nothing to commit"
+          git push
