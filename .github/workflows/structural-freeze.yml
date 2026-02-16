@@ -19,21 +19,37 @@ jobs:
           fetch-depth: 0
 
       - name: Extract tag name
-        run: echo "TAG_NAME=${GITHUB_REF#refs/tags/}" >> $GITHUB_ENV
-
-      - name: Generate structural index from tag commit
         run: |
-          echo "Generating snapshot for $TAG_NAME at commit $GITHUB_SHA"
+          echo "TAG_NAME=${GITHUB_REF#refs/tags/}" >> $GITHUB_ENV
+          echo "DATE_UTC=$(date -u +"%Y-%m-%dT%H:%M:%SZ")" >> $GITHUB_ENV
+
+      - name: Generate structural index
+        run: |
           git ls-tree -r --name-only "$GITHUB_SHA" | sort > "$TAG_NAME.index"
           openssl dgst -sha3-384 "$TAG_NAME.index" | awk '{print $2}' > "$TAG_NAME.index.sha3-384"
 
       - name: Switch to main branch
         run: git checkout main
 
-      - name: Commit snapshot into main
+      - name: Update STRUCTURAL_LEDGER
+        run: |
+          echo "" >> STRUCTURAL_LEDGER.md
+          echo "### $TAG_NAME" >> STRUCTURAL_LEDGER.md
+          echo "" >> STRUCTURAL_LEDGER.md
+          echo "TAG: $TAG_NAME" >> STRUCTURAL_LEDGER.md
+          echo "COMMIT: $GITHUB_SHA" >> STRUCTURAL_LEDGER.md
+          echo "DATE_UTC: $DATE_UTC" >> STRUCTURAL_LEDGER.md
+          echo "HASH_STANDARD: SHA3-384" >> STRUCTURAL_LEDGER.md
+          echo "INDEX_FILE: $TAG_NAME.index" >> STRUCTURAL_LEDGER.md
+          echo "HASH_FILE: $TAG_NAME.index.sha3-384" >> STRUCTURAL_LEDGER.md
+          echo "EVENT_TYPE: Structural Freeze (Automated)" >> STRUCTURAL_LEDGER.md
+          echo "" >> STRUCTURAL_LEDGER.md
+          echo "---" >> STRUCTURAL_LEDGER.md
+
+      - name: Commit and push
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git add *.index*
-          git commit -m "Auto structural snapshot for $TAG_NAME (SHA3-384)" || echo "Nothing to commit"
+          git add *.index* STRUCTURAL_LEDGER.md
+          git commit -m "Auto structural snapshot + ledger entry for $TAG_NAME" || echo "Nothing to commit"
           git push origin main
