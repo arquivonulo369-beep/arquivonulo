@@ -2,7 +2,7 @@
 
 Status: Active  
 Authority Layer: Root  
-Mutation Policy: Append-only  
+Mutation Policy: Append-only (Automated)  
 
 ---
 
@@ -10,7 +10,7 @@ Mutation Policy: Append-only
 
 TAG:
 COMMIT:
-DATE (UTC):
+DATE_UTC:
 HASH_STANDARD:
 INDEX_FILE:
 HASH_FILE:
@@ -19,16 +19,4 @@ EVENT_TYPE:
 ---
 
 ## ENTRIES
-
-### TEST-STRUCTURAL-AUTO-6
-
-TAG: TEST-STRUCTURAL-AUTO-6  
-COMMIT: 6251209  
-DATE (UTC): 2026-02-15  
-HASH_STANDARD: SHA-256  
-INDEX_FILE: TEST-STRUCTURAL-AUTO-6.index  
-HASH_FILE: TEST-STRUCTURAL-AUTO-6.index.sha256  
-EVENT_TYPE: Structural Freeze (Automated)
-
----
 
