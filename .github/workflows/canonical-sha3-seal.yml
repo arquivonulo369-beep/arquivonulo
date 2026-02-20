@@ -1,0 +1,51 @@
+name: Canonical SHA3-384 Auto Seal
+
+on:
+  push:
+    paths:
+      - '**.md'
+
+jobs:
+  seal:
+    if: github.actor != 'github-actions'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install OpenSSL
+        run: sudo apt-get update && sudo apt-get install -y openssl
+
+      - name: Generate SHA3-384 sidecars
+        run: |
+          changed=false
+
+          for file in $(find . -type f -name "*.md"); do
+
+            # Preserve legacy SHA-256 protected files
+            if [ -f "${file}.sha256" ]; then
+              continue
+            fi
+
+            hash=$(openssl dgst -sha3-384 "$file" | awk '{print $2}')
+
+            if [ -f "${file}.sha3-384" ]; then
+              existing=$(cat "${file}.sha3-384")
+              if [ "$existing" = "$hash" ]; then
+                continue
+              fi
+            fi
+
+            echo "$hash" > "${file}.sha3-384"
+            changed=true
+          done
+
+          if [ "$changed" = true ]; then
+            git config user.name "github-actions"
+            git config user.email "actions@github.com"
+            git add .
+            git commit -m "AUTO: update SHA3-384 canonical sidecars"
+            git push
+          fi
+
