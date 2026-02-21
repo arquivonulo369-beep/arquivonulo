@@ -1,3 +1,9 @@
+# ARQUIVONULO
+
+[![Canonical SHA3-384 Auto Seal](https://github.com/arquivonulo/arquivonulo/actions/workflows/canonical-sha3-seal.yml/badge.svg)](https://github.com/arquivonulo/arquivonulo/actions/workflows/canonical-sha3-seal.yml)
+
+Canonical integrity infrastructure for deterministic verification.
+
 Registry Snapshot (Archive):
 https://web.archive.org/web/20260129214403/https://github.com/arquivonulo369-beep/arquivonulo
 
