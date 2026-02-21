@@ -209,3 +209,4 @@ through consistency, persistence, and traceability.
 This repository exists so that  
 time — not interpretation — decides relevance.
 
+stability-check
