@@ -1,0 +1,52 @@
+name: Verify Canonical Integrity
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install SHA3 tool
+        run: sudo apt-get update && sudo apt-get install -y python3
+
+      - name: Verify SHA3-384 sidecars
+        run: |
+          python3 - << 'EOF'
+          import hashlib
+          import os
+          import sys
+
+          failed = False
+
+          for root, dirs, files in os.walk("."):
+              for file in files:
+                  if file.endswith(".md"):
+                      md_path = os.path.join(root, file)
+                      hash_path = md_path + ".sha3-384"
+
+                      if os.path.exists(hash_path):
+                          with open(md_path, "rb") as f:
+                              content = f.read()
+                              digest = hashlib.sha3_384(content).hexdigest()
+
+                          with open(hash_path, "r") as hf:
+                              recorded = hf.read().strip()
+
+                          if digest != recorded:
+                              print(f"Integrity mismatch: {md_path}")
+                              failed = True
+
+          if failed:
+              sys.exit(1)
+          else:
+              print("All SHA3-384 sidecars verified successfully.")
+          EOF
+
