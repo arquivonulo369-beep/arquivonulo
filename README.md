@@ -216,3 +216,15 @@ This repository exists so that
 time — not interpretation — decides relevance.
 
 stability-check
+
+---
+
+## 📚 External Archival Record
+
+Canonical Integrity Whitepaper v1.1  
+Internet Archive Record:  
+https://archive.org/details/canonical-integrity-whitepaper-v-1.1
+
+SHA3-384 (PDF):  
+c7716e1aac3dcb2ad4e7cf83c373ec31d1d5aad890de18771d2358181a70aa7ce25407766a32500ccfeffed1e6153f61
+
