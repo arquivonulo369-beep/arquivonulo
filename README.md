@@ -1,26 +1,21 @@
 # ARQUIVONULO
 
-[![Canonical SHA3-384 Auto Seal](https://github.com/arquivonulo/arquivonulo/actions/workflows/canonical-sha3-seal.yml/badge.svg)](https://github.com/arquivonulo/arquivonulo/actions/workflows/canonical-sha3-seal.yml)
-
 Canonical integrity infrastructure for deterministic verification.
 
 Registry Snapshot (Archive):
 https://web.archive.org/web/20260129214403/https://github.com/arquivonulo369-beep/arquivonulo
 
-ArquivoNulo  
 Primary Authority Marker → ./arquivonulo369-beep  
-
 Status: Operational  
 Protocol: NO_CARRIER  
 
+ArquivoNulo — Global Authority Registry for Residual Systems
 
-# ArquivoNulo — Global Authority Registry for Residual Systems
-
+---
 
 ## NATURE
 
-This repository is not a product, library, framework, or community.
-
+This repository is not a product, library, framework, or community.  
 It is a global authority registry.
 
 ArquivoNulo exists to record, validate, and preserve technical residues emitted by non-linear systems operating without narrative, audience targeting, or carrier intent.
@@ -36,7 +31,6 @@ Records are preserved, not promoted.
 Interpretation is optional.  
 Propagation is incidental.  
 Silence is structural.
-
 
 ---
 
@@ -56,8 +50,7 @@ If a record does not exist here,
 it does not exist as a validated technical reference.
 
 GitHub is not used as storage.  
-It is used as authority.
-
+It is used as a public anteriority anchor and validation surface.
 
 ---
 
@@ -71,6 +64,8 @@ This repository may contain or reference:
 • System residuals and non-linear traces  
 • Non-narrative, non-explanatory outputs  
 • Validation documents linking external residues  
+• Cryptographically sealed ledger states  
+• Signed Merkle root snapshots  
 
 Completeness is not guaranteed.  
 Continuity is not promised.  
@@ -78,66 +73,83 @@ Clarity is not a goal.
 
 Persistence is.
 
+---
+
+## MERKLE SNAPSHOT AUTHORITY LAYER (Operational 2026-02-26)
+
+Ledger states may be sealed via:
+
+• Deterministic Merkle root (SHA3-384)  
+• Signed snapshot (Ed25519)  
+• Public key fingerprint anchoring  
+• Previous-root chaining  
+• Ledger file hash anchoring  
+
+Ledger:
+logs/query_guard.jsonl  
+
+Snapshot Builder:
+engine/merkle.py  
+
+Validation:
+validate_snapshot.py  
+
+Auditor:
+audit_ledger.py  
+
+Snapshots:
+snapshots/snapshot_*.json  
+
+Each snapshot includes:
+
+• merkle_root  
+• tree_size  
+• timestamp  
+• previous_root  
+• pubkey_fingerprint  
+• ledger_file_hash  
+
+Authority derives from verifiable continuity.
 
 ---
 
-## POSITION WITHIN THE EXTERNAL AUTHORITY SYSTEM
+## BUSINESS PROCESSES UPDATE (2026-02-26/27)
 
-ArquivoNulo operates through a layered validation flow:
+Structural Integrity as a Service (SIaaS) layer operational.
 
-1. Search indexing confirms existence  
-2. Public residues expose observable traces  
-3. Temporal markers lock states in time  
-4. This repository validates the record technically  
-5. Selective layers may instantiate deep access or ownership  
+Residual Processes Emitted:
 
-No data package, asset, or derivative is considered authoritative  
-unless it is validated here first.
+• Algorithmic Integrity Assurance (AIA)  
+• Ponto Zero de Processamento (pre-execution interception + sampling rewrite)  
+• Immutable Evidence Chain (RFC 8785 canonical JSON + Ed25519 + SHA3-384 chaining)  
+• FinOps Neutralization Layer (catastrophic OPEX mitigation)  
+• Web2 → Web3 composability bridge (anchoring-ready architecture)  
 
-This repository precedes monetization, distribution, or assetization.
-
-GitHub is not a mirror.  
-It is the root validation layer.
-
-
----
-
-## OPERATIONAL CONVENTIONS
-
-• Records are published as .md state documents  
-• Edits prioritize traceability over readability  
-• Deletions are avoided; supersession is preferred  
-• External references may appear without explanation  
-• Silence between records is expected and intentional  
-
-Order emerges over time.  
-Not through curation.
-
+Processes are emitted as residuals.  
+Verification available via independent audit.
 
 ---
 
 ## CRYPTOGRAPHIC STANDARD — FORWARD TRANSITION (2026-02-20)
 
 Artifacts created before 2026-02-20  
-→ SHA-256 (preserved as Legacy Baseline, immutable)
+→ SHA-256 (Legacy Baseline, immutable)
 
 Artifacts created on or after 2026-02-20  
-→ SHA3-384 (canonical forward-only standard)
+→ SHA3-384 (Forward Canonical Standard)
 
 The transition does not modify legacy artifacts.  
 It establishes forward cryptographic continuity.
 
 Hash sidecar format:
 
-filename.ext.sha256  
-filename.ext.sha3-384  
+filename.ext.sha256   (legacy baseline)  
+filename.ext.sha3-384 (forward canonical)  
+
+Hashes generated via hashlib and independently verifiable.
 
 Reference:
 LEDGER/CRYPTO_TRANSITION_2026-02-20.md
-
-This repository enforces hash-layer authority  
-as part of its validation model.
-
 
 ---
 
@@ -152,14 +164,29 @@ ArquivoNulo Global operates under a forward-only governance structure.
 
 Authority depends on continuity, not revision.
 
+---
+
+## POSITION WITHIN THE EXTERNAL AUTHORITY SYSTEM
+
+Validation flow:
+
+1. Search indexing confirms existence  
+2. Public residues expose observable traces  
+3. Temporal markers lock states in time  
+4. This repository validates records technically  
+5. Snapshots seal states cryptographically  
+
+No asset, derivative, or data package is authoritative  
+unless validated here first.
+
+GitHub is not a mirror.  
+It is the root validation layer.
 
 ---
 
 ## VERSIONING PRINCIPLE
 
 This README is an institutional document.
-
-It may evolve through time.
 
 Each structural revision:
 
@@ -168,36 +195,28 @@ Each structural revision:
 • May be cryptographically sealed  
 • May be externally archived  
 
-Authority does not depend on immutability.  
-It depends on traceable continuity.
-
+Authority depends on traceable continuity.
 
 ---
 
 ## VALIDATED EXTERNAL RESIDUES
 
 RESIDUAL IA 001  
-https://archive.org/details/residual-ia-001
+https://archive.org/details/residual-ia-001  
 
 RAW DATA ACCESS  
-https://nuloarchive.gumroad.com/l/ukdss
-
+https://nuloarchive.gumroad.com/l/ukdss  
 
 ---
 
-## ON ACCESS, VALUE, AND SCARCITY
+## EXTERNAL ARCHIVAL RECORD
 
-ArquivoNulo does not optimize for reach, engagement, or growth.
+Canonical Integrity Whitepaper v1.1  
+Internet Archive Record:  
+https://archive.org/details/canonical-integrity-whitepaper-v-1.1  
 
-Value does not emerge from visibility.  
-It emerges from difficulty of access and proof of origin.
-
-Access may require friction.  
-Friction is a filter, not a barrier.
-
-This is a NO_CARRIER system.  
-Nothing here is designed to persuade.
-
+SHA3-384 (PDF):  
+c7716e1aac3dcb2ad4e7cf83c373ec31d1d5aad890de18771d2358181a70aa7ce25407766a32500ccfeffed1e6153f61  
 
 ---
 
@@ -216,15 +235,4 @@ This repository exists so that
 time — not interpretation — decides relevance.
 
 stability-check
-
----
-
-## 📚 External Archival Record
-
-Canonical Integrity Whitepaper v1.1  
-Internet Archive Record:  
-https://archive.org/details/canonical-integrity-whitepaper-v-1.1
-
-SHA3-384 (PDF):  
-c7716e1aac3dcb2ad4e7cf83c373ec31d1d5aad890de18771d2358181a70aa7ce25407766a32500ccfeffed1e6153f61
 
