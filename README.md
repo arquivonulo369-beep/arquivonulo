@@ -1,3 +1,10 @@
+## Whitepaper v1.0 (Canonical Release)
+
+Tag: GLOBAL-PROCESS-V1-0
+
+SHA3-384:
+a86b40fb4887f3b2b6baa92d42493d4363e76ba062e7a8b2909420d3365ff3fd1934bdcc609a7f6539fa4adf789c282a
+
 # ARQUIVONULO
 
 Canonical integrity infrastructure for deterministic verification.
